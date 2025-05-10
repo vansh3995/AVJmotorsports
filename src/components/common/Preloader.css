@@ -1,0 +1,50 @@
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  /* overflow: hidden;  Remove or comment out this line to allow scrolling */
+}
+
+.preloader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #000;
+  color: white;
+}
+
+.car-animation img,
+.fullscreen-gif {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  animation: none;
+  display: block;
+} 
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(-10px) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(10px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-10px) rotate(-2deg);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
